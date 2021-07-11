@@ -21,7 +21,7 @@ let spellDC = await Dialog.prompt({
 });
 
 let actors = canvas.tokens.controlled.map(({ actor }) => actor);
-let messageContent = '';
+let messageContent = 'Spell DC is ' + spellDC;
 const validActors = actors.filter(actor => actor != null);
 for (const selectedActor of validActors) {
   const dexMod = selectedActor.data.data.abilities.dex.mod; // dex mod
